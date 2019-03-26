@@ -1,39 +1,15 @@
 'use strict';
 
 {
-  //const player = {
-  //  name: 'taguchi',
-  //  score: 32,
-  //}
+  let x = 1;
+  let y = x;
+  x = 5;
+  console.log( x );
+  console.log( y );
 
-  class Player {
-    constructor(name, score) {
-      this.name = name;
-      this.score = score;
-    }
-
-    showInfo() {
-      console.log( `name: ${ this.name } score: ${ this.score }` );
-    }
-
-    static showVersion() {
-      console.log( 'Player class ver. 1.0' );
-    }
-  }
-
-  class SoccerPlayer extends Player {
-    constructor( name, score, number ) {
-      super( name, score );
-      this.number = number;
-    }
-    kick() {
-      console.log( "Goooaaal!" );
-    }
-  }
-
-  const tsubasa = new SoccerPlayer( 'tsubasa', 99, 10 );
-
-  tsubasa.kick();
-  console.log( tsubasa.number );
-  tsubasa.showInfo();
+  let a = [1, 2];
+  let b = a;
+  a[0] = 5;
+  console.log( a );
+  console.log( b );
 }
