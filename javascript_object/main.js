@@ -21,11 +21,19 @@
     }
   }
 
-  const taguchi = new Player( 'taguchi', 32 );
-  const fkoji = new Player( 'fkoji', 44 );
+  class SoccerPlayer extends Player {
+    constructor( name, score, number ) {
+      super( name, score );
+      this.number = number;
+    }
+    kick() {
+      console.log( "Goooaaal!" );
+    }
+  }
 
-  taguchi.showInfo();
-  fkoji.showInfo();
+  const tsubasa = new SoccerPlayer( 'tsubasa', 99, 10 );
 
-  Player.showVersion();
+  tsubasa.kick();
+  console.log( tsubasa.number );
+  tsubasa.showInfo();
 }
