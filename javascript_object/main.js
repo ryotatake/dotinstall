@@ -1,15 +1,14 @@
 'use strict';
 
 {
-  let x = 1;
-  let y = x;
-  x = 5;
-  console.log( x );
-  console.log( y );
+  const a = [1, 5, 10];
 
-  let a = [1, 2];
-  let b = a;
-  a[0] = 5;
+  a.unshift( 100 );
+  a.push( 200, 300 );
+
   console.log( a );
-  console.log( b );
+
+  a.shift();
+  a.pop();
+  console.log( a );
 }
