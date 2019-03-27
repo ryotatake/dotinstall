@@ -2,13 +2,10 @@
 
 {
   const a = [1, 5, 10];
-
-  a.unshift( 100 );
-  a.push( 200, 300 );
-
+  a.splice( 2, 0, 6, 7 );
   console.log( a );
 
-  a.shift();
-  a.pop();
+  const removed = a.splice( 1, 2 )
   console.log( a );
+  console.log( removed );
 }
