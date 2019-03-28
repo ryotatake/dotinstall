@@ -2,10 +2,20 @@
 
 {
   const a = [1, 5, 10];
-  a.splice( 2, 0, 6, 7 );
-  console.log( a );
 
-  const removed = a.splice( 1, 2 )
-  console.log( a );
-  console.log( removed );
+  for( let i = 0; i <= 2; i++ ) {
+    console.log( a[i] );
+  }
+
+  for( let i = 0; i < a.length; i++ ) {
+    console.log( a[i] );
+  }
+
+  a.forEach( item => {
+    console.log( item );
+  });
+
+  a.forEach(( item, index ) => {
+    console.log( `${index}: ${item}`);
+  });
 }
