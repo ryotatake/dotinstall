@@ -1,21 +1,20 @@
 'use strict';
 
 {
-  const a = [1, 5, 10];
-
-  for( let i = 0; i <= 2; i++ ) {
-    console.log( a[i] );
-  }
-
-  for( let i = 0; i < a.length; i++ ) {
-    console.log( a[i] );
-  }
-
+  const a = [1, 2, 5, 10];
+  const b = [];
   a.forEach( item => {
-    console.log( item );
+    b.push( item * 2 );
+  });
+  console.log( b );
+
+  const c = a.map( item => {
+    return item * 2;
   });
 
-  a.forEach(( item, index ) => {
-    console.log( `${index}: ${item}`);
-  });
+  const d = a.map( item => item * 2 );
+  console.log( d );
+
+  const e = a.filter( item => item % 2 === 0 );
+  console.log( e );
 }
