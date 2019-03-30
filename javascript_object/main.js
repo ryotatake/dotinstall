@@ -1,16 +1,17 @@
 'use strict';
 
 {
-  const o = {
-    a: 1,
-    b: 2,
-  };
+// const a = [10, 20];
+// const b = [1, 2, ...a];
+// console.log( b );
+// a[0] = 100;
+// console.log( b );
 
-  console.log( Object.keys( o ) );
-  console.log( Object.values( o ) );
-  console.log( Object.entries( o ) );
+// const a = [10, 20];
+// const sum = ( a, b ) => a + b;
+// console.log( sum( ...a ) );
 
-  Object.keys( o ).forEach( key => {
-    console.log( `${key}: ${o[key]}`);
-  });
+const o1 = { a: 1 };
+const o2 = {...o1, b: 2 };
+console.log( o2 );
 }
