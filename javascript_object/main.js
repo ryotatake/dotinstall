@@ -1,9 +1,8 @@
 'use strict';
 
 {
-  const str = 'hello';
+  console.log( Math.PI );
+  console.log( Math.random() );
 
-  console.log( str.length ); // 5
-  console.log( str.substring( 2, 4 ) );
-  console.log( str[1] );
+  console.log( Math.floor( Math.random() * 6 + 1 ) );
 }
