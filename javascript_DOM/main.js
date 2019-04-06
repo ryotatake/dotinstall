@@ -1,9 +1,12 @@
 'use strict';
 
 {
-  const div = document.querySelector( 'div' );
+  const a = document.querySelector( 'a' );
+  const span = document.querySelector( 'span' );
 
-  document.addEventListener( 'mousemove', e => {
-    div.textContent = `${e.clientX}:${e.clientY}`;
+  a.addEventListener( 'click', e => {
+    e.preventDefault();
+    a.classList.add( 'hidden' );
+    span.classList.remove( 'hidden' );
   });
 }
