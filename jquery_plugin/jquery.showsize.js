@@ -1,7 +1,8 @@
 ;(function($) {
-  $.fn.showsize = function() {
+  $.fn.showsize = function(options) {
     // this(3つのimg)
     let elements = this; // 分かりやすいように名付け
+    let opts = $.extend({}, $.fn.showsize.defaults, options);
 
     elements.each(function(idx, element) {
       // this (1つのimg)
@@ -14,13 +15,18 @@
           .css('top', '0')
           .css('background', 'black')
           .css('color', 'white')
-          .css('font-size', '10px')
-          .css('opacity', '0.9')
+          .css('font-size', opts.size + 'px')
+          .css('opacity', opts.opacity)
           .css('padding', '2px')
         $(this).after(div);
       });
     });
 
     return this; //メソッドチェインできるように
+  };
+
+  $.fn.showsize.defaults = {
+    size: 10,
+    opacity: 0.9
   };
 })(jQuery);
