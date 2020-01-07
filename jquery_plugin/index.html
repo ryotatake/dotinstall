@@ -5,8 +5,19 @@
     <title>jQueryプラグイン</title>
   </head>
   <body>
+    <p><img src="image1.jpg"></p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('img').click(function() {
+        let msg = $(this).width() + ' x ' + $(this).height();
+        $(this).wrap('<div style="position: relative;"></div>');
+        let div = $("<div>").text(msg).css('position', 'absolute').css('top', '0');
+        $(this).after(div);
+      });
+    });
+  </script>
   </body>
 </html>
 
