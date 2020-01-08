@@ -14,7 +14,7 @@
           .css('position', 'absolute')
           .css('top', '0')
           .css('background', 'black')
-          .css('color', 'white')
+          .css('color', getRandomColor())
           .css('font-size', opts.size + 'px')
           .css('opacity', opts.opacity)
           .css('padding', '2px')
@@ -24,6 +24,11 @@
 
     return this; //メソッドチェインできるように
   };
+
+  function getRandomColor() {
+    var colors = ['white', 'pink', 'orange', 'green'];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
 
   $.fn.showsize.defaults = {
     size: 10,
