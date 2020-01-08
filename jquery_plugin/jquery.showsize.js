@@ -2,12 +2,12 @@
   $.fn.showsize = function(options) {
     // this(3つのimg)
     let elements = this; // 分かりやすいように名付け
-    let opts = $.extend({}, $.fn.showsize.defaults, options);
 
     elements.each(function(idx, element) {
       // this (1つのimg)
       $(element).click(function() {
         let msg = $(this).width() + ' x ' + $(this).height();
+        let opts = $.extend({}, $.fn.showsize.defaults, options, $(this).data());
         $(this).wrap('<div style="position: relative;"></div>');
         let div = $("<div>")
           .text(msg)
